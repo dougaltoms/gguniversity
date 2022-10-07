@@ -21,15 +21,15 @@ install.packages("devtools")
 devtools::install_github("dougaltoms/gguniversity")
 ```
 
-A corresponding colour palette can be generated for your `ggplot2` visualisations, using the `<university>_palette()` function:
+A corresponding colour palette with `n` number of colours can be generated for your `ggplot2` visualisations, using the `<university>_palette()` function:
 
 ```{r}
 library(gguniversity)
 library(scales)
 
-exe_pal <- gguniversity::exeter_palette(6)
+exe_pal <- gguniversity::exeter_palette(16)
 
-scales::show_col(exe_pal, ncol = 6, border=NA, labels=F)
+scales::show_col(exe_pal, ncol = 4, border=NA, labels=F)
 ```
 
 ## Examples

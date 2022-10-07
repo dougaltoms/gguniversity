@@ -19,14 +19,17 @@ install.packages("devtools")
 devtools::install_github("dougaltoms/gguniversity")
 ```
 
-A corresponding colour palette can be generated for your `ggplot2`
-visualisations, using the `<university>_palette()` function:
+A corresponding colour palette with `n` number of colours can be
+generated for your `ggplot2` visualisations, using the
+`<university>_palette()` function:
 
 ``` r
 library(gguniversity)
 library(scales)
 
-scales::show_col(gguniversity::exeter_palette(6), ncol = 6, border=NA)
+exe_pal <- gguniversity::exeter_palette(16)
+
+scales::show_col(exe_pal, ncol = 4, border=NA, labels=F)
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
