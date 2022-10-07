@@ -29,7 +29,7 @@ library(scales)
 
 exe_pal <- gguniversity::exeter_palette(16)
 
-scales::show_col(exe_pal, ncol = 4, border=NA, labels=F)
+scales::show_col(exe_pal, ncol = 4, border=NA)
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
