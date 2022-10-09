@@ -65,17 +65,18 @@ theme_exeter <- function() {
                   axis.line.x.bottom =element_line(color = PrimaryColor,
                                                   size = 1),
                   axis.line.y.left = element_line(color = PrimaryColor,
-                                                  size = 1)
+                                                  size = 1),
+                  axis.ticks = element_line(color = PrimaryColor)
                   )
 
     # Customise panel
     theme <- theme +
                 theme(
+                  panel.background = element_blank(),
                   panel.grid.major = element_blank(),
                   panel.grid.minor = element_blank(),
                   panel.border = element_blank()
                 )
-
 
   }
 
@@ -99,4 +100,14 @@ exeter_palette <- function(n){
 
   return(pal)
 
+}
+
+exeter_logo <- function(plot){
+
+  path <- "~/Documents/gguniversity/figures/exeter.jpg"
+  img <- readJPEG(path, native = TRUE)
+  img <- rasterGrob(img, interpolate=TRUE)
+
+  plt+
+  annotation_custom(img, xmin=20, xmax=25,ymin=.5,ymax=1)
 }
